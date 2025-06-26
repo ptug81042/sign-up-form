@@ -7,8 +7,33 @@
         <title>Sign Up Form</title>
     </head>
     <body>
-
-
+        <main>
+            <form id="signup-form" novalidate>
+                <h2>Sign Up Form</h2>
+                <div class="sign-up-form-group">
+                    <label for="username">Enter Username: </label>
+                    <input type="text" name="username" id="username" required minlength="3" pattern="^[a-zA-Z0-9_]+$" autocomplete="off">
+                    <span class="error-message" id="username-error-message"></span>
+                </div>
+                <div class="sign-up-form-group">
+                    <label for="email">Enter Email: </label>
+                    <input type="text" name="email" id="email" required autocomplete="off">
+                    <span class="error-message" id="email-error-message"></span>
+                </div>
+                <div class="sign-up-form-group">
+                    <label for="password">Enter Password: </label>
+                    <input type="password" name="password" id="password" required minlength="6" autocomplete="off">
+                    <span class="error-message" id="password-error-message"></span>
+                </div>
+                <div class="sign-up-form-group">
+                    <label for="confirm-password">Confirm Password: </label>
+                    <input type="password" name="confirm-password" id="confirm-password" required minlength="6" autocomplete="off">
+                    <span class="error-message" id="confirm-password-error-message"></span>
+                </div>
+                <button type="submit">Sign Up for an Account</button>
+                <div id="sign-up-success-message" class="sign-up-success-message"></div>
+            </form>
+        </main>
         <script src="script.js"></script>
     </body>
 </html>
